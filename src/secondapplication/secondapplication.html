@@ -1,0 +1,7 @@
+<div class="secondapplication" data-ng-cloak>
+	<h1>The second simple application</h1>
+	<label for="lines">Lines of lyrics:</label>
+	<input type="number" ng-model="vm.lines" ng-change="vm.setLines()"/>
+	<a href="" ng-click="vm.getLyrics()">Refresh the lyrics!</a>
+	<p>{{vm.lyrics}}</p>
+</div>

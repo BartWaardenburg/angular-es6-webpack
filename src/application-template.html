@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{%= o.htmlWebpackPlugin.options.title %}</title>
+
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+  </head>
+  <body>
+
+      <div ng-{%=o.htmlWebpackPlugin.options.applicationname%} {%=o.htmlWebpackPlugin.options.directive%} class="{%=o.htmlWebpackPlugin.options.directive%}"></div>
+
+      {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+      <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+      {% } %}
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<div class="firstapplication" data-ng-cloak>
+	<h1>The first simple application</h1>
+	<a href="" ng-click="vm.singSong()">Sing me a song</a>
+	<dl>
+		<dt>My favorite place:</dt>
+		<dd>{{::vm.favoritePlace}}</dd>
+		<dt>I'm currently singing</dt>
+		<dd>{{vm.song}}</dd>
+	</dl>
+	<h2>Enjoy</h2>
+	<a href="" ng-click="vm.getLyrics()">Refresh the lyrics!</a>
+	<p>{{vm.lyrics}}</p>
+</div>
