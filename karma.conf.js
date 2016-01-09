@@ -31,7 +31,7 @@ module.exports = function karmaConfig (config) {
 		// Running npm run test:live will switch to continous testing
 		singleRun: true,
 
-		// The covverage is logged to the dist folder
+		// The coverage is logged to the dist folder
 		coverageReporter: {
 			dir: 'coverage/',
 			reporters: [

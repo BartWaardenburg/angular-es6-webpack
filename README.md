@@ -1,6 +1,20 @@
 # angular-es6-webpack
 A styleguide/generator for starting up a single page application using Angular.js ES6 and Webpack at its core.
 
+# Content
+* @TODO Set up generator for scaffolding
+* @TODO Explain npm
+* @TODO Explain babel
+* @TODO Explain webpack
+* @TODO Explain angular
+* @TODO Explain eslint
+* @TODO Explain karma
+* @TODO Explain tape
+* @TODO Explain jsdoc
+* @TODO Explain less
+* @TODO Settings & workflow Atom editor
+* @TODO Dutch version
+
 # Walkthrough
 ## Build System
 The package uses `webpack` for building the javascript, `less` and html files. `npm` is used to fire the command line scripts and handles installing of packages.
@@ -8,25 +22,16 @@ The package uses `webpack` for building the javascript, `less` and html files. `
 `webpack` handles all file-related concerns:
 
 * Transpiling from ES6 to ES5 with `Babel`
-
 * Loading HTML files as modules
-
 * Transpiling `less` stylesheets and appending them to the DOM
-
 * Bundling the app
-
 * Loading all modules
-
 * Starting a development server
-
 * Refreshing the browser and rebuilding on file changes
-
 * Generating boilerplate for the Angular app
 
 `npm` is used to fire the cli and install packages:
-
 * Installs all needed packages
-
 * Allows us to run simple commands to start up the different cli scripts
 
 ## File Structure
@@ -54,9 +59,7 @@ src
 All tests are also written in ES6. We use Webpack to take care of the logistics of getting those files to run in the various browsers, just like with our client files. This is the testing stack:
 
 * `karma`
-
 * `webpack` + `babel`
-
 * `tape`
 
 To run tests, type `npm test` or `npm run test:live` in the terminal. Read more about testing [below](#testing).
@@ -64,9 +67,7 @@ To run tests, type `npm test` or `npm run test:live` in the terminal. Read more 
 # Getting Started
 ## Installing
 1 Make sure you have `node` and `npm` installed on your machine
-
 2 `npm install -g karma karma-cli webpack jsdoc` install global cli dependencies
-
 3 `npm install` to install dependencies
 
 ## Running the App
@@ -77,13 +78,10 @@ Here's a list of available tasks:
 
 * `npm test`
 	* Will start the `karma` testrunner which in turn will start testing all written unit tests. It will report in the terminal and will export a lcov.info file.
-
 * `npm test:live`
 	* Will start the `karma` testrunner and will continuously run the unit tests. `karma` will watch for file changes and will update the test info accordingly.
-
 * `npm dev`
 	* This will use `webpack` to start up a development server with auto-reloading and will generate index.html files for all configured applications.
-
 * `npm prod`
 	* This will run `eslint` to check the code for any style or syntax errors. Will start `webpack` to bundle and minify the javascript files into a single bundle. Will extract all styling and put it in a separate minified css file. And will generate the code documentation using `jsdoc`.
 
