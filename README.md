@@ -88,15 +88,13 @@ Here's a list of available tasks:
 ### Development
 For the ideal development experience run both `npm run dev` and `npm run test:live` in separate terminal windows. Open up http://localhost:8080/dist/{{applicationname}} to see the page change as soon as your code changes. The terminal window with `npm run test:live` will continuously show you whether the unit tests are still running correctly.
 
-Preferred setup with atom. @TODO add atom config
-
 ### Testing
 To run the tests, run `npm test` or `npm run test:live`.
 
 `Karma` combined with `webpack` runs all files matching `*.test.js` inside the `src` folder. This allows us to keep test files local to the component. The file `tests.bundle.js` is the bundle file for **all** our test files that Karma will run.
 
 Be sure to define your `*.test.js` files within their corresponding component directory. You must name the unit test file like so, `[name].test.js`.
-`tape` is the used testing framework but could easily be swapped with something like `jasmine`.
+`tape` is the used testing framework but could easily be swapped with something like `jasmine` or `mocha`.
 
 Tests are ideally written in the following format:
 
